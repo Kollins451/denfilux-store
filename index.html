@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
@@ -10,76 +14,84 @@
   >
 
   <title>DENFILUX | Confidence. Style. Prestige.</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- =========================
+  <!-- ================================
        HEADER
-  ========================== -->
+  ================================= -->
 
   <header class="site-header">
 
     <div class="container header-inner">
 
-      <a href="#home" class="logo">
-        DENFILUX
+      <a href="#home" class="brand-logo">
+        <img
+          src="https://plain-weur-prod-public.komododecks.com/202608/27/l0I4YIDYelbT4Yu7dTya/image.jpg"
+          alt="DENFILUX Logo"
+        >
       </a>
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
 
       <nav class="main-nav">
 
         <a href="#home">Home</a>
-        <a href="#shop">Shop</a>
+        <a href="#collection">Collection</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="#privacy">Privacy</a>
 
       </nav>
+
+      <a href="#collection" class="header-button">
+        Shop Now
+      </a>
 
     </div>
 
   </header>
 
 
-  <main>
+  <!-- ================================
+       HERO
+  ================================= -->
 
-    <!-- =========================
-         HERO
-    ========================== -->
+  <main>
 
     <section id="home" class="hero">
 
+      <div class="hero-overlay"></div>
+
       <div class="container hero-content">
 
-        <p class="hero-label">
-          WELCOME TO DENFILUX
+        <p class="eyebrow">
+          DENFILUX COLLECTION
         </p>
 
         <h1>
-          From the Lion’s Den
-          <span>to the Light of Greatness.</span>
+          FROM THE LION'S DEN
+          <span>TO THE LIGHT OF GREATNESS.</span>
         </h1>
 
-        <p class="hero-text">
+        <p class="hero-description">
           Confidence. Style. Prestige.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-buttons">
 
-          <a href="#shop" class="btn btn-primary">
-            Shop Now
+          <a
+            href="#collection"
+            class="btn btn-primary"
+          >
+            Explore Collection
           </a>
 
-          <a href="#about" class="btn btn-secondary">
+          <a
+            href="#about"
+            class="btn btn-outline"
+          >
             Discover DENFILUX
           </a>
 
@@ -90,26 +102,26 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ================================
          BRAND INTRO
-    ========================== -->
+    ================================= -->
 
     <section class="brand-intro">
 
-      <div class="container">
+      <div class="container narrow">
 
-        <p class="section-label">
-          THE DENFILUX EXPERIENCE
+        <p class="eyebrow">
+          THE DENFILUX STANDARD
         </p>
 
         <h2>
-          Style that speaks before you do.
+          Wear Your Greatness.
         </h2>
 
         <p>
-          DENFILUX represents confidence, individuality and prestige.
-          Our goal is to bring a distinctive experience to every customer
-          through carefully presented products and exceptional service.
+          DENFILUX is built for individuals who move with confidence,
+          express their style boldly, and embrace their own sense of
+          greatness.
         </p>
 
       </div>
@@ -117,26 +129,33 @@
     </section>
 
 
-    <!-- =========================
-         SHOP
-    ========================== -->
+    <!-- ================================
+         COLLECTION
+    ================================= -->
 
-    <section id="shop" class="shop-section">
+    <section
+      id="collection"
+      class="collection-section"
+    >
 
       <div class="container">
 
         <div class="section-heading">
 
-          <p class="section-label">
-            SHOP DENFILUX
-          </p>
+          <div>
 
-          <h2>
-            Featured Collection
-          </h2>
+            <p class="eyebrow">
+              THE COLLECTION
+            </p>
 
-          <p>
-            Explore our collection and discover your next statement piece.
+            <h2>
+              DENFILUX Pieces
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+            Explore the latest DENFILUX designs.
           </p>
 
         </div>
@@ -145,39 +164,37 @@
         <div class="products-grid">
 
 
-          <!-- PRODUCT 1 -->
+          <!-- PRODUCT 01 -->
 
           <article class="product-card">
 
             <div class="product-image">
-
               <img
-                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
-                alt="DENFILUX premium fashion product"
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/DYCyQhrQCovjTjNEhvRA/image.jpg"
+                alt="DENFILUX black yellow red tracksuit"
+                loading="lazy"
               >
-
             </div>
 
             <div class="product-info">
 
-              <p class="product-category">
-                DENFILUX COLLECTION
-              </p>
+              <span class="product-number">
+                01
+              </span>
 
               <h3>
-                Signature Tee
+                Lion Signature Set
               </h3>
 
-              <p class="product-description">
-                A refined statement piece created for everyday confidence.
+              <p>
+                Black, yellow and red DENFILUX statement set.
               </p>
 
-              <p class="product-price">
-                ₦35,000
-              </p>
-
-              <a href="#contact" class="product-btn">
-                Order Now
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
               </a>
 
             </div>
@@ -185,39 +202,37 @@
           </article>
 
 
-          <!-- PRODUCT 2 -->
+          <!-- PRODUCT 02 -->
 
           <article class="product-card">
 
             <div class="product-image">
-
               <img
-                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=80"
-                alt="DENFILUX premium fashion collection"
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/Ld5NgbBtJ90JZy7AdcxW/image.jpg"
+                alt="DENFILUX black camouflage tracksuit"
+                loading="lazy"
               >
-
             </div>
 
             <div class="product-info">
 
-              <p class="product-category">
-                DENFILUX COLLECTION
-              </p>
+              <span class="product-number">
+                02
+              </span>
 
               <h3>
-                Prestige Collection
+                Camo Prestige Set
               </h3>
 
-              <p class="product-description">
-                Designed to bring sophistication and distinction to your style.
+              <p>
+                Black camouflage design with refined DENFILUX detailing.
               </p>
 
-              <p class="product-price">
-                ₦50,000
-              </p>
-
-              <a href="#contact" class="product-btn">
-                Order Now
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
               </a>
 
             </div>
@@ -225,39 +240,37 @@
           </article>
 
 
-          <!-- PRODUCT 3 -->
+          <!-- PRODUCT 03 -->
 
           <article class="product-card">
 
             <div class="product-image">
-
               <img
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=900&q=80"
-                alt="DENFILUX luxury fashion product"
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/gxxFWK22mV1QFf7feCgB/image.jpg"
+                alt="DENFILUX red camouflage tracksuit"
+                loading="lazy"
               >
-
             </div>
 
             <div class="product-info">
 
-              <p class="product-category">
-                DENFILUX COLLECTION
-              </p>
+              <span class="product-number">
+                03
+              </span>
 
               <h3>
-                Luxe Essential
+                Red Camo Edition
               </h3>
 
-              <p class="product-description">
-                A premium essential designed for a confident modern look.
+              <p>
+                A bold red camouflage set designed to stand out.
               </p>
 
-              <p class="product-price">
-                ₦45,000
-              </p>
-
-              <a href="#contact" class="product-btn">
-                Order Now
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
               </a>
 
             </div>
@@ -265,39 +278,303 @@
           </article>
 
 
-          <!-- PRODUCT 4 -->
+          <!-- PRODUCT 04 -->
 
           <article class="product-card">
 
-            <div class="product-image">
-
+            <div class="product-image logo-product">
               <img
-                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
-                alt="DENFILUX signature fashion"
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/N4jcCbX1fvDv7oHFEpKc/image.jpg"
+                alt="DENFILUX green tracksuit"
+                loading="lazy"
               >
-
             </div>
 
             <div class="product-info">
 
-              <p class="product-category">
-                DENFILUX COLLECTION
-              </p>
+              <span class="product-number">
+                04
+              </span>
 
               <h3>
-                Lion Edition
+                Green Street Set
               </h3>
 
-              <p class="product-description">
-                A bold collection inspired by confidence, power and greatness.
+              <p>
+                Green DENFILUX streetwear set with signature graphics.
               </p>
 
-              <p class="product-price">
-                ₦65,000
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 05 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/bPRP2opBVsHuGWmpmbrm/image.jpg"
+                alt="DENFILUX purple graphic t-shirt"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+
+              <span class="product-number">
+                05
+              </span>
+
+              <h3>
+                Graphic Tee
+              </h3>
+
+              <p>
+                DENFILUX graphic tee featuring a bold global-inspired design.
               </p>
 
-              <a href="#contact" class="product-btn">
-                Order Now
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 06 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/MfqyNz1SkLCBIkM8BO3n/image.jpg"
+                alt="DENFILUX grey graphic t-shirt"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+
+              <span class="product-number">
+                06
+              </span>
+
+              <h3>
+                Grey Graphic Tee
+              </h3>
+
+              <p>
+                Distinctive DENFILUX graphic design in grey.
+              </p>
+
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 07 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/LIYX5jPVJEmdf8VGGqiI/image.jpg"
+                alt="DENFILUX pink two piece outfit"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+
+              <span class="product-number">
+                07
+              </span>
+
+              <h3>
+                Pink Signature Set
+              </h3>
+
+              <p>
+                A clean pink two-piece DENFILUX look.
+              </p>
+
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 08 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/AmkCpbKA78YuMRRHtbFT/image.jpg"
+                alt="DENFILUX black streetwear tracksuit"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+
+              <span class="product-number">
+                08
+              </span>
+
+              <h3>
+                Black Street Set
+              </h3>
+
+              <p>
+                Black streetwear set with signature yellow DENFILUX graphics.
+              </p>
+
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 09 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/qPnp3DPg6wpp63COzW6G/image.jpg"
+                alt="DENFILUX black plaid shirt"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+
+              <span class="product-number">
+                09
+              </span>
+
+              <h3>
+                Plaid Statement Shirt
+              </h3>
+
+              <p>
+                Black plaid short-sleeve shirt with DENFILUX graphics.
+              </p>
+
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 10 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/yH1ZFPShRYlGHR4mWvng/image.jpg"
+                alt="DENFILUX white tracksuit"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+
+              <span class="product-number">
+                10
+              </span>
+
+              <h3>
+                White Signature Set
+              </h3>
+
+              <p>
+                Clean white DENFILUX tracksuit with black and gold details.
+              </p>
+
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 11 -->
+
+          <article class="product-card">
+
+            <div class="product-image">
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202608/27/BfVIEKjOy36rBGnsESl8/image.jpg"
+                alt="DENFILUX white cropped set"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="product-info">
+
+              <span class="product-number">
+                11
+              </span>
+
+              <h3>
+                White Crop Set
+              </h3>
+
+              <p>
+                Contemporary DENFILUX cropped two-piece design.
+              </p>
+
+              <a
+                href="#contact"
+                class="product-link"
+              >
+                Enquire Now →
               </a>
 
             </div>
@@ -312,9 +589,9 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ================================
          ABOUT
-    ========================== -->
+    ================================= -->
 
     <section id="about" class="about-section">
 
@@ -323,37 +600,38 @@
         <div class="about-image">
 
           <img
-            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80"
-            alt="DENFILUX brand experience"
+            src="https://plain-weur-prod-public.komododecks.com/202608/27/DYCyQhrQCovjTjNEhvRA/image.jpg"
+            alt="DENFILUX collection"
+            loading="lazy"
           >
 
         </div>
 
-
         <div class="about-content">
 
-          <p class="section-label">
+          <p class="eyebrow">
             ABOUT DENFILUX
           </p>
 
           <h2>
-            Built around confidence, style and prestige.
+            Built for those who choose to stand out.
           </h2>
 
           <p>
-            DENFILUX is a brand created for individuals who value confidence,
-            style and distinction.
+            DENFILUX represents a bold approach to fashion and self-expression.
+            Every piece is designed to carry confidence, individuality and
+            presence.
           </p>
 
           <p>
-            From the way our products are presented to the experience we
-            provide our customers, every detail is designed to represent
-            greatness.
+            From distinctive streetwear sets to statement pieces, DENFILUX
+            brings together style and character for people who want their
+            presence to be remembered.
           </p>
 
-          <p class="brand-tagline">
+          <div class="tagline">
             From the Lion’s Den to the Light of Greatness.
-          </p>
+          </div>
 
         </div>
 
@@ -362,22 +640,22 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ================================
          VALUES
-    ========================== -->
+    ================================= -->
 
     <section class="values-section">
 
       <div class="container">
 
-        <div class="section-heading">
+        <div class="section-heading centered">
 
-          <p class="section-label">
-            WHY DENFILUX
+          <p class="eyebrow">
+            THE DENFILUX DIFFERENCE
           </p>
 
           <h2>
-            The DENFILUX Standard
+            Confidence. Style. Prestige.
           </h2>
 
         </div>
@@ -385,60 +663,49 @@
 
         <div class="values-grid">
 
+          <div class="value-card">
 
-          <article class="value-card">
-
-            <div class="value-icon">
-              01
-            </div>
+            <span>01</span>
 
             <h3>
               Confidence
             </h3>
 
             <p>
-              Products and experiences designed to help you express yourself
-              with confidence.
+              Wear pieces that reflect who you are and how you want to be seen.
             </p>
 
-          </article>
+          </div>
 
 
-          <article class="value-card">
+          <div class="value-card">
 
-            <div class="value-icon">
-              02
-            </div>
+            <span>02</span>
 
             <h3>
               Style
             </h3>
 
             <p>
-              A distinctive approach to presentation, fashion and personal
-              expression.
+              Distinctive designs created to make an impression wherever you go.
             </p>
 
-          </article>
+          </div>
 
 
-          <article class="value-card">
+          <div class="value-card">
 
-            <div class="value-icon">
-              03
-            </div>
+            <span>03</span>
 
             <h3>
               Prestige
             </h3>
 
             <p>
-              A premium experience built around quality, attention to detail
-              and distinction.
+              A brand experience centered around individuality and greatness.
             </p>
 
-          </article>
-
+          </div>
 
         </div>
 
@@ -447,27 +714,26 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ================================
          CTA
-    ========================== -->
+    ================================= -->
 
     <section class="cta-section">
 
-      <div class="container">
+      <div class="container narrow">
 
-        <p class="section-label">
-          YOUR NEXT STATEMENT
+        <p class="eyebrow">
+          YOUR NEXT LOOK
         </p>
 
         <h2>
           Step into the world of DENFILUX.
         </h2>
 
-        <p>
-          Discover the collection and find something that represents you.
-        </p>
-
-        <a href="#shop" class="btn btn-primary">
+        <a
+          href="#collection"
+          class="btn btn-primary"
+        >
           Explore Collection
         </a>
 
@@ -476,28 +742,30 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ================================
          CONTACT
-    ========================== -->
+    ================================= -->
 
-    <section id="contact" class="contact-section">
+    <section
+      id="contact"
+      class="contact-section"
+    >
 
       <div class="container contact-grid">
 
-
         <div class="contact-content">
 
-          <p class="section-label">
-            CONTACT DENFILUX
+          <p class="eyebrow">
+            GET IN TOUCH
           </p>
 
           <h2>
-            Let’s connect.
+            Let's talk.
           </h2>
 
           <p>
-            Have a question about a product, an order or delivery?
-            Get in touch with DENFILUX.
+            Interested in a product or want to know more about DENFILUX?
+            Contact us directly.
           </p>
 
 
@@ -505,9 +773,9 @@
 
             <div class="contact-item">
 
-              <strong>
-                Phone / WhatsApp
-              </strong>
+              <span>
+                PHONE / WHATSAPP
+              </span>
 
               <a href="tel:+2347072346559">
                 +234 707 234 6559
@@ -518,9 +786,9 @@
 
             <div class="contact-item">
 
-              <strong>
-                Email
-              </strong>
+              <span>
+                EMAIL
+              </span>
 
               <a href="mailto:denfilux@gmail.com">
                 denfilux@gmail.com
@@ -533,23 +801,41 @@
         </div>
 
 
-        <!-- CONTACT FORM -->
-
         <form class="contact-form">
 
-          <div class="form-group">
+          <div class="form-row">
 
-            <label for="name">
-              Full Name
-            </label>
+            <div class="form-group">
 
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your full name"
-              required
-            >
+              <label for="name">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone Number
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your phone number"
+              >
+
+            </div>
 
           </div>
 
@@ -564,24 +850,8 @@
               type="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Your email address"
               required
-            >
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="phone">
-              Phone Number
-            </label>
-
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Enter your phone number"
             >
 
           </div>
@@ -597,7 +867,7 @@
               id="message"
               name="message"
               rows="6"
-              placeholder="How can we help you?"
+              placeholder="Tell us what you're interested in..."
               required
             ></textarea>
 
@@ -618,15 +888,18 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ================================
          PRIVACY POLICY
-    ========================== -->
+    ================================= -->
 
-    <section id="privacy" class="privacy-section">
+    <section
+      id="privacy"
+      class="privacy-section"
+    >
 
       <div class="container privacy-content">
 
-        <p class="section-label">
+        <p class="eyebrow">
           LEGAL
         </p>
 
@@ -634,9 +907,8 @@
           DENFILUX Privacy Policy
         </h2>
 
-        <p class="privacy-updated">
-          <strong>Last Updated:</strong>
-          August 22, 2026
+        <p class="privacy-date">
+          Last Updated: August 22, 2026
         </p>
 
 
@@ -677,17 +949,13 @@
           2. How We Use Your Information
         </h3>
 
-        <p>
-          We may use your information to:
-        </p>
-
         <ul>
           <li>Process and confirm orders</li>
           <li>Arrange delivery of your purchases</li>
           <li>Contact you regarding your order</li>
-          <li>Respond to questions and customer-service requests</li>
+          <li>Respond to customer-service requests</li>
           <li>Provide information about DENFILUX products and promotions</li>
-          <li>Improve our products, services, and customer experience</li>
+          <li>Improve our products, services and customer experience</li>
           <li>Prevent fraudulent or unauthorized transactions</li>
           <li>Comply with applicable legal requirements</li>
         </ul>
@@ -716,13 +984,8 @@
 
         <p>
           When you place an order, we may provide necessary information such
-          as your name, phone number, and delivery address to a delivery or
+          as your name, phone number and delivery address to a delivery or
           logistics provider so that your order can be delivered.
-        </p>
-
-        <p>
-          We only share information that is reasonably necessary to complete
-          the delivery.
         </p>
 
 
@@ -732,13 +995,8 @@
 
         <p>
           If you choose to receive marketing communications from DENFILUX,
-          we may contact you about new products, promotions, collections,
-          or other brand updates.
-        </p>
-
-        <p>
-          You may ask us to stop sending promotional communications at any
-          time by contacting us through the details provided below.
+          we may contact you about new products, promotions, collections or
+          other brand updates.
         </p>
 
 
@@ -748,11 +1006,6 @@
 
         <p>
           DENFILUX does not sell your personal information.
-        </p>
-
-        <p>
-          We may share limited information with trusted service providers
-          when necessary to operate our business, including:
         </p>
 
         <ul>
@@ -774,17 +1027,6 @@
           our products and reach potential customers.
         </p>
 
-        <p>
-          Where advertising tools collect or process personal information,
-          that processing may also be subject to the relevant platform’s
-          privacy policy and terms.
-        </p>
-
-        <p>
-          Where required, DENFILUX will provide appropriate notices and
-          obtain any required consent.
-        </p>
-
 
         <h3>
           8. Cookies and Similar Technologies
@@ -793,13 +1035,8 @@
         <p>
           Our website or advertising platforms may use cookies and similar
           technologies to improve website functionality, understand how
-          visitors use our services, measure advertising performance,
-          and provide relevant advertising.
-        </p>
-
-        <p>
-          You may be able to control cookies through your browser or device
-          settings.
+          visitors use our services, measure advertising performance and
+          provide relevant advertising.
         </p>
 
 
@@ -809,12 +1046,7 @@
 
         <p>
           We take reasonable steps to protect personal information against
-          unauthorized access, loss, misuse, alteration, or disclosure.
-        </p>
-
-        <p>
-          However, no method of transmitting or storing information online
-          can be guaranteed to be completely secure.
+          unauthorized access, loss, misuse, alteration or disclosure.
         </p>
 
 
@@ -826,7 +1058,7 @@
           We retain personal information only for as long as reasonably
           necessary for the purposes described in this Privacy Policy,
           including fulfilling orders, maintaining business records,
-          resolving disputes, preventing fraud, and meeting legal or
+          resolving disputes, preventing fraud and meeting legal or
           regulatory requirements.
         </p>
 
@@ -843,32 +1075,20 @@
         <ul>
           <li>Request access to personal information we hold about you</li>
           <li>Request correction of inaccurate information</li>
-          <li>Request deletion of information where legally applicable</li>
+          <li>Request deletion where legally applicable</li>
           <li>Withdraw consent where processing is based on consent</li>
           <li>Object to certain processing</li>
-          <li>
-            Request information about how your personal information is being used
-          </li>
+          <li>Request information about how your information is used</li>
         </ul>
-
-        <p>
-          To exercise a privacy right, contact DENFILUX using the contact
-          information below.
-        </p>
 
 
         <h3>
-          12. Children’s Privacy
+          12. Children's Privacy
         </h3>
 
         <p>
           DENFILUX does not knowingly collect personal information from
           children where such collection is prohibited by applicable law.
-        </p>
-
-        <p>
-          If you believe a child has provided us with personal information
-          improperly, please contact us so that we can take appropriate action.
         </p>
 
 
@@ -877,14 +1097,9 @@
         </h3>
 
         <p>
-          Our website, advertisements, or social-media pages may contain
-          links to third-party websites or services.
-        </p>
-
-        <p>
-          DENFILUX is not responsible for the privacy practices of third-party
-          websites. We encourage you to review their privacy policies before
-          providing personal information.
+          Our website, advertisements or social-media pages may contain
+          links to third-party websites or services. DENFILUX is not
+          responsible for the privacy practices of third-party websites.
         </p>
 
 
@@ -894,12 +1109,7 @@
 
         <p>
           We may update this Privacy Policy from time to time to reflect
-          changes in our business, services, technology, or legal requirements.
-        </p>
-
-        <p>
-          When we make changes, we will update the Last Updated date at the
-          top of this page.
+          changes in our business, services, technology or legal requirements.
         </p>
 
 
@@ -907,17 +1117,11 @@
           15. Contact DENFILUX
         </h3>
 
-        <p>
-          If you have questions about this Privacy Policy or want to exercise
-          a privacy right, please contact DENFILUX:
-        </p>
-
-
         <div class="privacy-contact">
 
-          <p>
-            <strong>DENFILUX</strong>
-          </p>
+          <strong>
+            DENFILUX
+          </strong>
 
           <p>
             📞 Phone/WhatsApp:
@@ -934,8 +1138,7 @@
           </p>
 
           <p>
-            🌐 Website:
-            <span>[YOUR WEBSITE URL]</span>
+            🌐 Website: Your DENFILUX website
           </p>
 
         </div>
@@ -947,28 +1150,29 @@
   </main>
 
 
-  <!-- =========================
+  <!-- ================================
        FOOTER
-  ========================== -->
+  ================================= -->
 
   <footer class="site-footer">
 
-    <div class="container footer-inner">
+    <div class="container footer-grid">
 
 
       <div class="footer-brand">
 
-        <a href="#home" class="logo">
-          DENFILUX
-        </a>
+        <img
+          src="https://plain-weur-prod-public.komododecks.com/202608/27/l0I4YIDYelbT4Yu7dTya/image.jpg"
+          alt="DENFILUX Logo"
+        >
 
         <p>
           From the Lion’s Den to the Light of Greatness.
         </p>
 
-        <p>
+        <span>
           Confidence. Style. Prestige. 🦁💎
-        </p>
+        </span>
 
       </div>
 
@@ -976,11 +1180,11 @@
       <div class="footer-links">
 
         <h3>
-          Quick Links
+          Explore
         </h3>
 
         <a href="#home">Home</a>
-        <a href="#shop">Shop</a>
+        <a href="#collection">Collection</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#privacy">Privacy Policy</a>
@@ -1003,7 +1207,6 @@
         </a>
 
       </div>
-
 
     </div>
 
