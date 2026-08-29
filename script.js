@@ -7,7 +7,7 @@
    MOBILE NAVIGATION
 ========================================= */
 
-const menuToggle = document.querySelector(".menu-toggle");
+const menuToggle = document.querySelector(".mobile-menu-btn");
 const mainNav = document.querySelector(".main-nav");
 
 if (menuToggle && mainNav) {
@@ -18,7 +18,12 @@ if (menuToggle && mainNav) {
 
     menuToggle.setAttribute(
       "aria-expanded",
-      isOpen
+      String(isOpen)
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
     );
 
     menuToggle.textContent = isOpen ? "✕" : "☰";
@@ -26,7 +31,7 @@ if (menuToggle && mainNav) {
   });
 
 
-  /* Close menu when a navigation link is clicked */
+  /* Close menu when navigation link is clicked */
 
   const navLinks = mainNav.querySelectorAll("a");
 
@@ -41,6 +46,11 @@ if (menuToggle && mainNav) {
         "false"
       );
 
+      menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+      );
+
       menuToggle.textContent = "☰";
 
     });
@@ -51,26 +61,119 @@ if (menuToggle && mainNav) {
 
 
 /* =========================================
-   PRODUCT ORDER BUTTONS
+   CONTACT FORM
+========================================= */
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+
+  contactForm.addEventListener("submit", (event) => {
+
+    const nameInput = contactForm.querySelector("#name");
+    const emailInput = contactForm.querySelector("#email");
+    const phoneInput = contactForm.querySelector("#phone");
+    const messageInput = contactForm.querySelector("#message");
+
+
+    const name = nameInput
+      ? nameInput.value.trim()
+      : "";
+
+    const email = emailInput
+      ? emailInput.value.trim()
+      : "";
+
+    const phone = phoneInput
+      ? phoneInput.value.trim()
+      : "";
+
+    const message = messageInput
+      ? messageInput.value.trim()
+      : "";
+
+
+    /* =========================================
+       BASIC VALIDATION
+    ========================================= */
+
+    if (!name || !email || !message) {
+
+      event.preventDefault();
+
+      alert(
+        "Please complete your name, email address, and message."
+      );
+
+      return;
+
+    }
+
+
+    /* =========================================
+       EMAIL VALIDATION
+    ========================================= */
+
+    const emailPattern =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+
+      event.preventDefault();
+
+      alert(
+        "Please enter a valid email address."
+      );
+
+      return;
+
+    }
+
+
+    /*
+      IMPORTANT:
+
+      We DO NOT use event.preventDefault()
+      after successful validation.
+
+      This allows the browser to submit
+      the form directly to the FormSubmit
+      action in the HTML.
+
+      The HTML action should be:
+
+      https://formsubmit.co/oladimejikollins07@gmail.com
+
+      FormSubmit will then process the form.
+    */
+
+    console.log("DENFILUX form submitting...");
+
+    console.log({
+      name,
+      email,
+      phone,
+      message
+    });
+
+  });
+
+}
+
+
+/* =========================================
+   PRODUCT BUTTONS
 ========================================= */
 
 const productButtons =
-  document.querySelectorAll(".product-btn");
+  document.querySelectorAll(".product-link");
 
 productButtons.forEach((button) => {
 
-  button.addEventListener("click", (event) => {
-
-    /*
-      At the moment these buttons link to
-      the Contact section.
-
-      Later we can turn this into a complete
-      shopping/order system.
-    */
+  button.addEventListener("click", () => {
 
     console.log(
-      "DENFILUX product selected"
+      "DENFILUX product enquiry selected."
     );
 
   });
@@ -87,8 +190,6 @@ const revealElements = document.querySelectorAll(
 );
 
 
-/* Add initial class */
-
 revealElements.forEach((element) => {
 
   element.classList.add("reveal");
@@ -96,38 +197,50 @@ revealElements.forEach((element) => {
 });
 
 
-/* Observer */
+if ("IntersectionObserver" in window) {
 
-const revealObserver =
-  new IntersectionObserver(
-    (entries, observer) => {
+  const revealObserver =
+    new IntersectionObserver(
+      (entries, observer) => {
 
-      entries.forEach((entry) => {
+        entries.forEach((entry) => {
 
-        if (entry.isIntersecting) {
+          if (entry.isIntersecting) {
 
-          entry.target.classList.add("revealed");
+            entry.target.classList.add("revealed");
 
-          observer.unobserve(
-            entry.target
-          );
+            observer.unobserve(
+              entry.target
+            );
 
-        }
+          }
 
-      });
+        });
 
-    },
-    {
-      threshold: 0.12
-    }
-  );
+      },
+      {
+        threshold: 0.12
+      }
+    );
 
 
-revealElements.forEach((element) => {
+  revealElements.forEach((element) => {
 
-  revealObserver.observe(element);
+    revealObserver.observe(element);
 
-});
+  });
+
+} else {
+
+  /* Fallback for older browsers */
+
+  revealElements.forEach((element) => {
+
+    element.classList.add("revealed");
+
+  });
+
+}
 
 
 /* =========================================
@@ -142,14 +255,14 @@ if (yearElement) {
   const currentYear =
     new Date().getFullYear();
 
-  yearElement.innerHTML =
+  yearElement.textContent =
     `© ${currentYear} DENFILUX. All rights reserved.`;
 
 }
 
 
 /* =========================================
-   CONSOLE MESSAGE
+   DENFILUX INITIALIZATION
 ========================================= */
 
 console.log(
