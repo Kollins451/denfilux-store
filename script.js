@@ -7,31 +7,26 @@
    MOBILE NAVIGATION
 ========================================= */
 
-const menuToggle = document.querySelector(".mobile-menu-btn");
-const mainNav = document.querySelector(".main-nav");
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mainNav = document.getElementById("mainNav");
 
-if (menuToggle && mainNav) {
+if (mobileMenuBtn && mainNav) {
 
-  menuToggle.addEventListener("click", () => {
+  mobileMenuBtn.addEventListener("click", () => {
 
     const isOpen = mainNav.classList.toggle("active");
 
-    menuToggle.setAttribute(
+    mobileMenuBtn.setAttribute(
       "aria-expanded",
-      String(isOpen)
+      isOpen ? "true" : "false"
     );
 
-    menuToggle.setAttribute(
-      "aria-label",
-      isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-
-    menuToggle.textContent = isOpen ? "✕" : "☰";
+    mobileMenuBtn.textContent = isOpen ? "✕" : "☰";
 
   });
 
 
-  /* Close menu when navigation link is clicked */
+  /* Close menu when a navigation link is clicked */
 
   const navLinks = mainNav.querySelectorAll("a");
 
@@ -41,17 +36,12 @@ if (menuToggle && mainNav) {
 
       mainNav.classList.remove("active");
 
-      menuToggle.setAttribute(
+      mobileMenuBtn.setAttribute(
         "aria-expanded",
         "false"
       );
 
-      menuToggle.setAttribute(
-        "aria-label",
-        "Open navigation menu"
-      );
-
-      menuToggle.textContent = "☰";
+      mobileMenuBtn.textContent = "☰";
 
     });
 
@@ -62,47 +52,43 @@ if (menuToggle && mainNav) {
 
 /* =========================================
    CONTACT FORM
+   Opens the visitor's email app
+   and prepares a message for DENFILUX
 ========================================= */
 
-const contactForm = document.querySelector(".contact-form");
+const contactForm =
+  document.getElementById("contactForm");
 
 if (contactForm) {
 
   contactForm.addEventListener("submit", (event) => {
 
-    const nameInput = contactForm.querySelector("#name");
-    const emailInput = contactForm.querySelector("#email");
-    const phoneInput = contactForm.querySelector("#phone");
-    const messageInput = contactForm.querySelector("#message");
+    event.preventDefault();
 
 
-    const name = nameInput
-      ? nameInput.value.trim()
-      : "";
+    /* Get form values */
 
-    const email = emailInput
-      ? emailInput.value.trim()
-      : "";
+    const name =
+      document.getElementById("name")?.value.trim();
 
-    const phone = phoneInput
-      ? phoneInput.value.trim()
-      : "";
+    const phone =
+      document.getElementById("phone")?.value.trim();
 
-    const message = messageInput
-      ? messageInput.value.trim()
-      : "";
+    const email =
+      document.getElementById("email")?.value.trim();
+
+    const message =
+      document.getElementById("message")?.value.trim();
 
 
     /* =========================================
        BASIC VALIDATION
     ========================================= */
 
-    if (!name || !email || !message) {
-
-      event.preventDefault();
+    if (!name || !phone || !email || !message) {
 
       alert(
-        "Please complete your name, email address, and message."
+        "Please complete all the required fields."
       );
 
       return;
@@ -119,8 +105,6 @@ if (contactForm) {
 
     if (!emailPattern.test(email)) {
 
-      event.preventDefault();
-
       alert(
         "Please enter a valid email address."
       );
@@ -130,31 +114,64 @@ if (contactForm) {
     }
 
 
-    /*
-      IMPORTANT:
+    /* =========================================
+       TEST EMAIL
+       Change this back to denfilux@gmail.com
+       after the test is successful.
+    ========================================= */
 
-      We DO NOT use event.preventDefault()
-      after successful validation.
+    const ownerEmail =
+      "oladimejikollins07@gmail.com";
 
-      This allows the browser to submit
-      the form directly to the FormSubmit
-      action in the HTML.
 
-      The HTML action should be:
+    /* =========================================
+       EMAIL SUBJECT
+    ========================================= */
 
-      https://formsubmit.co/oladimejikollins07@gmail.com
+    const subject =
+      "New DENFILUX Website Enquiry";
 
-      FormSubmit will then process the form.
-    */
 
-    console.log("DENFILUX form submitting...");
+    /* =========================================
+       EMAIL MESSAGE
+    ========================================= */
 
-    console.log({
-      name,
-      email,
-      phone,
-      message
-    });
+    const body =
+`Hello DENFILUX,
+
+You have received a new enquiry from your website.
+
+Full Name: ${name}
+
+Phone Number: ${phone}
+
+Email Address: ${email}
+
+Message:
+${message}
+
+--------------------------------
+Sent from the DENFILUX website.`;
+
+
+    /* =========================================
+       CREATE EMAIL LINK
+    ========================================= */
+
+    const mailtoLink =
+      "mailto:" +
+      ownerEmail +
+      "?subject=" +
+      encodeURIComponent(subject) +
+      "&body=" +
+      encodeURIComponent(body);
+
+
+    /* =========================================
+       OPEN EMAIL APP
+    ========================================= */
+
+    window.location.href = mailtoLink;
 
   });
 
@@ -162,18 +179,18 @@ if (contactForm) {
 
 
 /* =========================================
-   PRODUCT BUTTONS
+   PRODUCT LINKS
 ========================================= */
 
-const productButtons =
+const productLinks =
   document.querySelectorAll(".product-link");
 
-productButtons.forEach((button) => {
+productLinks.forEach((link) => {
 
-  button.addEventListener("click", () => {
+  link.addEventListener("click", () => {
 
     console.log(
-      "DENFILUX product enquiry selected."
+      "DENFILUX product selected"
     );
 
   });
@@ -185,9 +202,10 @@ productButtons.forEach((button) => {
    SCROLL REVEAL
 ========================================= */
 
-const revealElements = document.querySelectorAll(
-  ".product-card, .value-card, .about-content, .about-image, .contact-content, .contact-form"
-);
+const revealElements =
+  document.querySelectorAll(
+    ".product-card, .value-card, .about-content, .about-image, .contact-content, .contact-form"
+  );
 
 
 revealElements.forEach((element) => {
@@ -232,8 +250,6 @@ if ("IntersectionObserver" in window) {
 
 } else {
 
-  /* Fallback for older browsers */
-
   revealElements.forEach((element) => {
 
     element.classList.add("revealed");
@@ -262,7 +278,7 @@ if (yearElement) {
 
 
 /* =========================================
-   DENFILUX INITIALIZATION
+   CONSOLE MESSAGE
 ========================================= */
 
 console.log(
