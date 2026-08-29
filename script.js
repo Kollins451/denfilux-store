@@ -115,13 +115,11 @@ if (contactForm) {
 
 
     /* =========================================
-       TEST EMAIL
-       Change this back to denfilux@gmail.com
-       after the test is successful.
+       DENFILUX OWNER EMAIL
     ========================================= */
 
     const ownerEmail =
-      "oladimejikollins07@gmail.com";
+      "denfilux@gmail.com";
 
 
     /* =========================================
@@ -168,7 +166,7 @@ Sent from the DENFILUX website.`;
 
 
     /* =========================================
-       OPEN EMAIL APP
+       OPEN VISITOR'S EMAIL APP
     ========================================= */
 
     window.location.href = mailtoLink;
