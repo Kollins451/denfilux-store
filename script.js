@@ -60,8 +60,6 @@ if (contactForm) {
 
   contactForm.addEventListener("submit", (event) => {
 
-    event.preventDefault();
-
     const name = document
       .querySelector("#name")
       ?.value.trim();
@@ -83,6 +81,8 @@ if (contactForm) {
 
     if (!name || !email || !message) {
 
+      event.preventDefault();
+
       alert(
         "Please complete your name, email address, and message."
       );
@@ -99,6 +99,8 @@ if (contactForm) {
 
     if (!emailPattern.test(email)) {
 
+      event.preventDefault();
+
       alert(
         "Please enter a valid email address."
       );
@@ -109,32 +111,15 @@ if (contactForm) {
 
 
     /*
-      Temporary behavior.
+      Validation passed.
 
-      Later we can connect this form to:
-      - Email service
-      - Backend
-      - WhatsApp
-      - Form service
-      - CRM
+      IMPORTANT:
+      We do NOT use event.preventDefault()
+      here.
+
+      This allows the form to submit normally
+      to FormSubmit.
     */
-
-    console.log("DENFILUX Contact Form");
-
-    console.log({
-      name,
-      email,
-      phone,
-      message
-    });
-
-
-    alert(
-      `Thank you, ${name}. Your message has been received.`
-    );
-
-
-    contactForm.reset();
 
   });
 
@@ -181,7 +166,9 @@ const revealElements = document.querySelectorAll(
 /* Add initial class */
 
 revealElements.forEach((element) => {
+
   element.classList.add("reveal");
+
 });
 
 
